@@ -1,0 +1,12 @@
+(task "build"
+    "Compile the app."
+    (empty-dir output)
+    (exec elm make --optimize ./src/Main.elm --output "output/app.js")
+    (copy "./node_modules/@github/clipboard-copy-element/dist/index.umd.js" "output/clipboard-copy.js")
+    (copy index.html output/index.html)
+)
+
+(task "deps"
+    "Install dependencies"
+    (exec npm install)
+)

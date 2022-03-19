@@ -1,0 +1,15 @@
+{
+  "name": "timer-cmd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "rhiz build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@github/clipboard-copy-element": "^1.1.2",
+    "esbuild": "^0.14.27"
+  }
+}

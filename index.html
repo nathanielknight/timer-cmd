@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Timer</title>
+    <style>
+        html {
+            font-size: 16pt;
+        }
+
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            html {
+                font-size: 20pt;
+            }
+        }
+
+        main {
+            max-width: 30em;
+            margin: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input,
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 120%;
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 110%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #timer-cmd label {
+            display: inline-block;
+            width: 6em;
+        }
+
+        #cmd {
+            overflow: scroll;
+        }
+
+        pre {
+            border: 1px solid black;
+            padding: 0.3em;
+            background-color: lightgray;
+            text-overflow: ellipsis;
+        }
+
+        #timer-cmd p {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <h1>Computer Timer Commands</h1>
+        <p>This page creates a shell command for setting timers on your computer.</p>
+        <div id="computer-timer"></div>
+
+    </main>
+
+    <script src="./clipboard-copy.js"></script>
+    <script src="app.js"></script>
+    <script>
+        let appElement = document.getElementById("computer-timer");
+        Elm.Main.init({ node: appElement });
+    </script>
+
+</body>
+
+</html>
